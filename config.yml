@@ -4,3 +4,13 @@ MySQL database:
   database: kitpvp
   port: 3306
   hostname: 127.0.0.1
+
+# What is your permission for main staff commands etc.
+PERMISSION.STAFF: ""
+
+# Message for /staffantiabuse command?
+ANTI.ABUSE.COMMAND:
+  - ""
+  - ""
+  - ""
+  - ""
