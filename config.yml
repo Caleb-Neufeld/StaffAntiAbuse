@@ -14,3 +14,18 @@ ANTI.ABUSE.COMMAND:
   - ""
   - ""
   - ""
+
+# What is your creative command permission?
+CREATIVE.PERMISSION: ""
+
+# Players not allowed to join? Use this.
+PLAYERS.NOT.ALLOWED:
+  - ""
+  - ""
+  - ""
+  - ""
+
+# Command executed when a player not allowed to join, trys to join. Do not put a /.
+COMMAND.EXECUTED.PLAYERS: ""
+
+

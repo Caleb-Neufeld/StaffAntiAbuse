@@ -24,12 +24,12 @@ public class CommandSpyListener implements Listener {
     @EventHandler(priority = EventPriority.LOW)
     public void onCommand(PlayerCommandPreprocessEvent event) {
         Player player = event.getPlayer();
+        /* Checking if the player has a permission, if so we check if they execute something with the start /
+         if so we get all players, if they have a certain permission, we send a message. */
         if(player.hasPermission(plugin.getConfig().getString("PERMISSION.STAFF"))) {
-            if(event.getMessage().startsWith("/")) {
                 for(Player allOnline : Bukkit.getOnlinePlayers()) {
                     if(allOnline.hasPermission("command.spy") && CommandSpyCommand.staff.contains(allOnline)) {
                         allOnline.sendMessage(new CC(plugin.getConfig().getString("COMMAND.SPY.MESSAGE")).translate());
-                    }
                 }
             }
         }

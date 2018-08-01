@@ -2,6 +2,6 @@ package com.sniper.staffantiabuse.objects;
 
 public enum AbuseType {
 
-    DROP, COMMAND, PLACE
+    DROP, COMMAND, PLACE, CHEST
 
 }

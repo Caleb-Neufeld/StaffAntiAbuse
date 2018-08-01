@@ -27,11 +27,13 @@ public class CommandSpyCommand implements CommandExecutor {
             if(sender instanceof Player) {
                 Player player = (Player)sender;
                 if(player.hasPermission("command.spy")) {
+                    // Checking if the player has CommandSpy enabled already, if so we remove them from it.
                     if(staff.contains(player.getUniqueId())) {
                         staff.remove(player.getUniqueId());
                         player.sendMessage(new CC("&7You have successfully &cDisabled &7Staff Monitoring.").translate());
                         return true;
                     } else {
+                        // Adding the player to CommandSpy, as they did not have it enabled already.
                         staff.add(player.getUniqueId());
                         player.sendMessage(new CC("&7You have successfully &aEnabled &7Staff Monitoring.").translate());
                         return true;
