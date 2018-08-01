@@ -19,6 +19,10 @@ public class StaffAntiAbuse extends JavaPlugin {
         instance = this;
     }
 
+    public static StaffAntiAbuse getInstance() {
+        return instance;
+    }
+
     public void loadSQL() {
         FileConfiguration file = this.getConfig();
         String path = "MySQL database.";
@@ -46,7 +50,5 @@ public class StaffAntiAbuse extends JavaPlugin {
         return sql;
     }
 
-    public static StaffAntiAbuse getInstance() {
-        return instance;
-    }
+
 }
