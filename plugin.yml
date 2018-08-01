@@ -1,0 +1,7 @@
+name: "StaffAntiAbuse"
+main: com.sniper.staffantiabuse.StaffAntiAbuse
+authors:
+  - "FU22Y, Sniper"
+version: 0.1
+description: "Staff Anti Abuse [0.1] made by FU22Y & Sniper"
+commands:
