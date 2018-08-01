@@ -1,8 +1,11 @@
 package com.sniper.staffantiabuse;
 
+import com.sniper.staffantiabuse.listeners.ItemDropListener;
+import com.sniper.staffantiabuse.listeners.PlayerJoinListener;
 import com.sniper.staffantiabuse.managers.sql.MySQL;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.sql.DatabaseMetaData;
@@ -15,8 +18,15 @@ public class StaffAntiAbuse extends JavaPlugin {
     private static StaffAntiAbuse instance;
 
     public void onEnable() {
-        loadSQL();
+        //loadSQL();
         instance = this;
+        registerEvents();
+    }
+
+    public void registerEvents() {
+        PluginManager pm = Bukkit.getPluginManager();
+        pm.registerEvents(new ItemDropListener(), this);
+        pm.registerEvents(new PlayerJoinListener(this), this);
     }
 
     public static StaffAntiAbuse getInstance() {

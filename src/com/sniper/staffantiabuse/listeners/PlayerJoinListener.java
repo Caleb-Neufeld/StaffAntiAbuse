@@ -1,7 +1,6 @@
 package com.sniper.staffantiabuse.listeners;
 
 import com.sniper.staffantiabuse.StaffAntiAbuse;
-import com.sniper.staffantiabuse.objects.CC;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -27,10 +26,11 @@ public class PlayerJoinListener implements Listener {
             if (player.getName().equalsIgnoreCase(playerNames)) {
                 Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "/" + plugin.getConfig().getString("COMMAND.EXECUTED.PLAYERS"));
             }
-            // Checking if the player is in Gamemode Creative, and if they don't have the permission for creative.permission, they will be set to survival.
+        // Checking if the player is in Gamemode Creative, and if they don't have the permission for creative.permission, they will be set to survival.
         if (player.getGameMode() == GameMode.CREATIVE && !player.hasPermission(plugin.getConfig().getString("CREATIVE.PERMISSION"))) {
             player.setGameMode(GameMode.SURVIVAL);
             player.sendMessage(ChatColor.RED + "You should not be in creative.");
         }
     }
+
 }

@@ -1,6 +1,7 @@
 package com.sniper.staffantiabuse.commands;
 
 import com.sniper.staffantiabuse.StaffAntiAbuse;
+import com.sniper.staffantiabuse.objects.CC;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -21,7 +22,7 @@ public class StaffAntiAbuseCommand implements CommandExecutor {
             if(sender instanceof Player) {
                 Player player = (Player)sender;
                 for(String stringX : plugin.getConfig().getStringList("ANTI.ABUSE.COMMAND"))
-                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', stringX));
+                        player.sendMessage(new CC(stringX).translate());
                     }
         }
         return false;
