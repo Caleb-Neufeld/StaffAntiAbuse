@@ -1,4 +1,4 @@
-package listeners;
+package com.sniper.staffantiabuse.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

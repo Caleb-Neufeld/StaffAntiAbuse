@@ -1,4 +1,6 @@
-import managers.sql.MySQL;
+package com.sniper.staffantiabuse;
+
+import com.sniper.staffantiabuse.managers.sql.MySQL;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

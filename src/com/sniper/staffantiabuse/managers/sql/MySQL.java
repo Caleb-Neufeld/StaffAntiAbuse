@@ -1,4 +1,4 @@
-package managers.sql;
+package com.sniper.staffantiabuse.managers.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
