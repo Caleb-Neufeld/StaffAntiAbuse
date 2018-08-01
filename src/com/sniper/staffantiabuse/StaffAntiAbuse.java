@@ -12,8 +12,11 @@ public class StaffAntiAbuse extends JavaPlugin {
 
     private static MySQL sql;
 
+    private static StaffAntiAbuse instance;
+
     public void onEnable() {
         loadSQL();
+        instance = this;
     }
 
     public void loadSQL() {
@@ -41,5 +44,9 @@ public class StaffAntiAbuse extends JavaPlugin {
 
     public static MySQL getSql() {
         return sql;
+    }
+
+    public static StaffAntiAbuse getInstance() {
+        return instance;
     }
 }
