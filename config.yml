@@ -1,0 +1,6 @@
+MySQL database:
+  user: root
+  password: ''
+  database: kitpvp
+  port: 3306
+  hostname: 127.0.0.1
